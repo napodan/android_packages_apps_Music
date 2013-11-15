@@ -1287,6 +1287,11 @@ public class TrackBrowserActivity extends ListActivity
         }
 
         @Override
+        public int getType(int column) {
+            return mCurrentPlaylistCursor.getType(column);
+        }
+
+        @Override
         public boolean isNull(int column)
         {
             return mCurrentPlaylistCursor.isNull(column);
